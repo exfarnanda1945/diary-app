@@ -26,7 +26,6 @@ fun AuthenticationContent(
     modifier: Modifier =Modifier
 ) {
     Column(
-        modifier=modifier,
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
