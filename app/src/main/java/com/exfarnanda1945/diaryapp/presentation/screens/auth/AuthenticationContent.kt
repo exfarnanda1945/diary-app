@@ -30,7 +30,7 @@ fun AuthenticationContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Column(
-            modifier = Modifier
+            modifier = modifier
                 .weight(9f)
                 .fillMaxWidth()
                 .padding(40.dp),
