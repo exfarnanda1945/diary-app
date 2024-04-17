@@ -48,7 +48,10 @@ fun AuthenticationContent(
                     modifier = Modifier.size(120.dp)
                 )
                 Spacer(modifier = Modifier.height(20.dp))
-                Text(text = stringResource(R.string.welcome_back), fontSize = MaterialTheme.typography.titleLarge.fontSize)
+                Text(
+                    text = stringResource(R.string.welcome_back),
+                    fontSize = MaterialTheme.typography.titleLarge.fontSize
+                )
                 Text(
                     text = stringResource(R.string.please_sign_in),
                     fontSize = MaterialTheme.typography.titleLarge.fontSize,
