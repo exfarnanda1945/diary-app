@@ -6,8 +6,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.rememberNavController
@@ -20,6 +22,8 @@ import io.realm.kotlin.mongodb.App
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        installSplashScreen()
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.auto(
                 Color.TRANSPARENT,Color.TRANSPARENT
@@ -28,11 +32,11 @@ class MainActivity : ComponentActivity() {
                 Color.TRANSPARENT,Color.TRANSPARENT
             ),
         )
-        installSplashScreen()
         setContent {
             DiaryAppTheme {
                 val controller = rememberNavController()
-                Surface(color = MaterialTheme.colorScheme.background) {
+                Surface(modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background) {
                     NavGraph(
                         startDestination = getStartDestination(),
                         navHostController = controller
